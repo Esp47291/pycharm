@@ -1,43 +1,35 @@
-# src/decorators.py
-
-def generator_decorator(func):
-    """
-    Простой декоратор, который оборачивает
-    исходную функцию-генератор и возвращает генератор.
-    Здесь можно добавить любую дополнительную логику,
-    например логирование.
-    """
-    def wrapper(*args, **kwargs):
-        # возвращаем сам генератор, чтобы сохранилось поведение yield
-        return func(*args, **kwargs)
-    return wrapper
+from typing import Callable, Any, Optional
+import datetime
 
 
-@generator_decorator
-def filter_by_currency(transactions, currency_code):
+def log(filename: Optional[str] = None) -> Callable:
     """
-    Генератор, фильтрующий транзакции по коду валюты.
-    """
-    for transaction in transactions:
-        if transaction["operationAmount"]["currency"]["code"] == currency_code:
-            yield transaction
+    Декоратор для логирования вызовов функций.
 
+    :param filename: Имя файла для записи логов. Если не указано, логи выводятся в консоль.
+    :return: Декорированная функция.
+    """
 
-@generator_decorator
-def transaction_descriptions(transactions):
-    """
-    Генератор, возвращающий описания транзакций.
-    """
-    for transaction in transactions:
-        yield transaction["description"]
+    def decorator(func: Callable) -> Callable:
+        def wrapper(*args: Any, **kwargs: Any) -> Any:
+            # Формируем сообщение для логирования
+            log_message: str = f"{datetime.datetime.now()} - {func.name}"
 
+            try:
+                result: object = func(*args, **kwargs)
+                log_message += f" ok\n"
+            except Exception as e:
+                log_message += f" error: {type(e).name}. Inputs: {args}, {kwargs}\n"
+                result = None
 
-@generator_decorator
-def card_number_generator(start, end):
-    """
-    Генератор, формирующий номера карт в формате:
-    'XXXX XXXX XXXX XXXX', заполняя нулями слева при необходимости.
-    """
-    for number in range(start, end + 1):
-        card_number = str(number).zfill(16)
-        yield f"{card_number[:4]} {card_number[4:8]} {card_number[8:12]} {card_number[12:16]}"
+            # Логирование в файл или консоль
+            if filename:
+                with open(filename, "a", encoding="utf-8") as file:
+                    file.write(log_message)
+            else:
+                print(log_message, end="")
+
+            return result
+        return wrapper
+
+    return decorator
