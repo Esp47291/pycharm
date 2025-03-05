@@ -21,7 +21,8 @@ from src.widget import mask_account_card, get_date
     ],
 )
 def test_mask_account_card(input_data, expected_output):
-    """Тестирование функции mask_account_card с корректными входными данными. Проверяем, что функция корректно маскирует номера карт и счетов."""
+    """Тестирование функции mask_account_card с корректными
+     входными данными. Проверяем, что функция корректно маскирует номера карт и счетов."""
 
     result = mask_account_card(input_data)
     assert result == expected_output
@@ -98,4 +99,3 @@ def test_get_date():
             get_date(input_date)
 
     # Тесты для граничных случаев
-
