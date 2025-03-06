@@ -1,5 +1,6 @@
-import pytest
+
 from src.masks import get_mask_card_number, get_mask_account
+
 
 def test_get_mask_card_number():
     """Тест функции get_mask_card_number"""
@@ -17,6 +18,7 @@ def test_get_mask_card_number():
 
     # Номер карты, содержащий не цифры
     assert get_mask_card_number("abcddefghjkltyui") == "abcd de** **** tyui"
+
 
 def test_get_mask_account():
     """Тест функции get_mask_account"""

@@ -1,6 +1,7 @@
 from typing import Callable, Any, Optional
 import datetime
 
+
 def log(filename: Optional[str] = None) -> Callable:
 
     def decorator(func: Callable) -> Callable:

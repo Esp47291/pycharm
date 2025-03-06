@@ -2,10 +2,12 @@ import os
 import pytest
 from src.decorators import log
 
+
 @pytest.fixture
 def clear_log_file():
     if os.path.exists("mylog.txt"):
         os.remove("mylog.txt")
+
 
 def test_log_to_file(clear_log_file):
     @log(filename="mylog.txt")
@@ -18,6 +20,7 @@ def test_log_to_file(clear_log_file):
         log_content = file.read()
     assert "add ok" in log_content
 
+
 def test_log_to_console(capsys):
     @log()
     def multiply(a: int, b: int) -> int:
@@ -26,6 +29,7 @@ def test_log_to_console(capsys):
     multiply(3, 4)
     captured = capsys.readouterr()
     assert "multiply ok" in captured.out
+
 
 def test_log_error(clear_log_file):
     @log(filename="mylog.txt")
