@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d384d94c-5b8f-434b-83cf-5b747093223f" name="Changes" comment="remake decorators.py 2.0">
+    <list default="true" id="d384d94c-5b8f-434b-83cf-5b747093223f" name="Changes" comment="remake decorators.py 4.1">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/operations.json.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/external_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/file_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_masks.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_masks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_processing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +33,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -126,8 +129,27 @@
       <option name="project" value="LOCAL" />
       <updated>1741079793769</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="remake decorators.py 4.0">
+      <option name="closed" value="true" />
+      <created>1741249784627</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741249784627</updated>
+    </task>
+    <task id="LOCAL-00009" summary="remake decorators.py 4.1">
+      <option name="closed" value="true" />
+      <created>1741250074445</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741250074445</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -144,6 +166,8 @@
     <MESSAGE value="pytest, geneators &amp; decorators" />
     <MESSAGE value="remake decorators.py" />
     <MESSAGE value="remake decorators.py 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="remake decorators.py 2.0" />
+    <MESSAGE value="remake decorators.py 4.0" />
+    <MESSAGE value="remake decorators.py 4.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="remake decorators.py 4.1" />
   </component>
 </project>

@@ -39,7 +39,7 @@ git clone https://github.com/username/my_bank_operations_project.git
    - Пример использования:
      ```python
      descriptions = transaction_descriptions(transactions)
-     for description in descriptions:
+     for description in description:
          print(description)
      ```
 

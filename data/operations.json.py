@@ -1,0 +1,4 @@
+var = [
+    {"amount": 100, "currency": "RUB"},
+    {"amount": 200, "currency": "USD"}
+]
