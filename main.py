@@ -7,3 +7,17 @@ if __name__ == "__main__":
 
     print("Маскированный номер карты:", get_mask_card_number(card_number))
     print("Маскированный номер счета:", get_mask_account(account_number))
+
+from utils.utils import do_something
+from masks.masks import create_mask
+
+def main() -> None:
+    # Примеры вызова функций, где логируются результаты
+    result = do_something(10, 2)
+    print("Результат:", result)
+
+    mask = create_mask(5)
+    print("Созданная маска:", mask)
+
+if __name__ == "__main__":
+    main()
