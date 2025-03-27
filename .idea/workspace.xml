@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d384d94c-5b8f-434b-83cf-5b747093223f" name="Changes" comment="demo json 2.0">
+    <list default="true" id="d384d94c-5b8f-434b-83cf-5b747093223f" name="Changes" comment="12.2 Библиотека logging">
+      <change afterPath="$PROJECT_DIR$/data/transactions.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/transactions_excel.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/csv_excel_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_csv_excel_reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/operations.json.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/masks.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/masks.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop_2" />
+        <entry key="$PROJECT_DIR$" value="develop_3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +52,7 @@
     &quot;Python tests.Python tests in test_masks.py.executor&quot;: &quot;Debug&quot;,
     &quot;Python._versions.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop__3&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop12.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
@@ -166,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742901231442</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="12.2 Библиотека logging">
+      <option name="closed" value="true" />
+      <created>1742989808180</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742989808180</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -183,7 +193,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="develop_3" />
+                        <option value="develop12.2" />
                       </list>
                     </value>
                   </entry>
@@ -203,6 +213,7 @@
     <MESSAGE value="remake decorators.py 4.1" />
     <MESSAGE value="demo json 1.0" />
     <MESSAGE value="demo json 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="demo json 2.0" />
+    <MESSAGE value="12.2 Библиотека logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="12.2 Библиотека logging" />
   </component>
 </project>

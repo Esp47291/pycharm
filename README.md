@@ -81,4 +81,7 @@ def add(a: int, b: int) -> int:
     return a + b
 
 add(1, 2)
-
+```
+## Новая функциональность
+- Добавлена поддержка чтения финансовых операций из CSV- и Excel-файлов.
+- Реализованы функции `read_transactions_csv` и `read_transactions_excel` в модуле `src/csv_excel_reader.py`.
