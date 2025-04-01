@@ -1,37 +1,27 @@
-import pandas as pd
+import csv
 
-def read_transactions_csv(file_path):
+
+def read_transactions_from_csv(file_path):
     """
-    Считывает финансовые операции из CSV-файла.
+    Считывает финансовые операции из CSV-файла и возвращает их в виде списка словарей.
 
     Args:
         file_path (str): Путь к CSV-файлу.
 
     Returns:
-        list[dict]: Список словарей с транзакциями.
+        list[dict]: Список словарей, где каждый словарь представляет одну транзакцию.
     """
+    transactions = []
     try:
-        df = pd.read_csv(file_path)
-        transactions = df.to_dict(orient='records')
+        with open(file_path, mode='r', encoding='utf-8') as csv_file:
+            # Указываем разделитель (например, запятую). Если разделитель другой, его нужно указать явно.
+            reader = csv.DictReader(csv_file, delimiter=',')
+            for row in reader:
+                transactions.append(row)
         return transactions
-    except Exception as e:
-        print(f"Ошибка при чтении CSV-файла: {e}")
+    except FileNotFoundError:
+        print(f"Файл {file_path} не найден.")
         return []
-
-def read_transactions_excel(file_path):
-    """
-    Считывает финансовые операции из Excel-файла.
-
-    Args:
-        file_path (str): Путь к Excel-файлу.
-
-    Returns:
-        list[dict]: Список словарей с транзакциями.
-    """
-    try:
-        df = pd.read_excel(file_path)
-        transactions = df.to_dict(orient='records')
-        return transactions
     except Exception as e:
-        print(f"Ошибка при чтении Excel-файла: {e}")
+        print(f"Произошла ошибка при чтении файла: {e}")
         return []
