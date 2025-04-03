@@ -1,25 +1,15 @@
+import pytest
 import pandas as pd
+from src.csv_excel_reader import read_csv, read_excel
 
+def test_read_csv():
+    # Тестовый CSV-файл
+    csv_file = "test_data.csv"
+    df = read_csv(csv_file)
+    assert isinstance(df, pd.DataFrame)
 
-def read_transactions_from_excel(file_path):
-    """
-    Считывает финансовые операции из Excel-файла и возвращает их в виде списка словарей.
-
-    Args:
-        file_path (str): Путь к Excel-файлу.
-
-    Returns:
-        list[dict]: Список словарей, где каждый словарь представляет одну транзакцию.
-    """
-    try:
-        # Читаем Excel-файл с помощью pandas
-        df = pd.read_excel(file_path)
-        # Преобразуем DataFrame в список словарей
-        transactions = df.to_dict(orient='records')
-        return transactions
-    except FileNotFoundError:
-        print(f"Файл {file_path} не найден.")
-        return []
-    except Exception as e:
-        print(f"Произошла ошибка при чтении файла: {e}")
-        return []
+def test_read_excel():
+    # Тестовый Excel-файл
+    excel_file = "test_data.xlsx"
+    df = read_excel(excel_file)
+    assert isinstance(df, pd.DataFrame)

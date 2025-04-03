@@ -1,8 +1,8 @@
-
 # test_generators.py
 
 import pytest
 from src.generators import filter_by_currency, transaction_descriptions, card_number_generator
+
 
 # Фикстура для тестовых данных
 
@@ -59,7 +59,7 @@ def sample_transactions() -> list[dict]:
 
 
 #  Тесты для filterbycurrency
-def filter_by_currency(sampletransactions: list[dict], usd_transactions=None) -> None:
+def filter_by_currenc(sampletransactions: list[dict], usd_transactions=None) -> None:
     filter_by_currency(sampletransactions)
     assert next(usd_transactions)["id"] == 939719570
     assert next(usd_transactions)["id"] == 142264268
@@ -68,7 +68,7 @@ def filter_by_currency(sampletransactions: list[dict], usd_transactions=None) ->
 
 
 # Тесты для transaction_descriptions
-def transaction_descriptions(sample_transactions: list[dict]) -> None:
+def transaction_description(sample_transactions: list[dict]) -> None:
     descriptions = transaction_descriptions()
     assert next(descriptions) == "Перевод организации"
     assert next(descriptions) == "Перевод со счета на счет"
@@ -83,6 +83,6 @@ def transaction_descriptions(sample_transactions: list[dict]) -> None:
     (1, 3, ["0000 0000 0000 0001", "0000 0000 0000 0002", "0000 0000 0000 0003"]),
     (9999, 10001, ["0000 0000 0000 9999", "0000 0000 0001 0000", "0000 0000 0001 0001"])
 ])
-def card_number_generator(start, end, expected):
+def card_number_generate(start, end, expected):
     result = list(card_number_generator(start, end))
     assert result == expected

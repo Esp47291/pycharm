@@ -1,27 +1,30 @@
-import csv
+import pandas as pd
 
-
-def read_transactions_from_csv(file_path):
+def read_csv(file_path):
     """
-    Считывает финансовые операции из CSV-файла и возвращает их в виде списка словарей.
+    Читает данные из CSV-файла и возвращает их в виде DataFrame.
 
-    Args:
-        file_path (str): Путь к CSV-файлу.
-
-    Returns:
-        list[dict]: Список словарей, где каждый словарь представляет одну транзакцию.
+    :param file_path: Путь к файлу CSV.
+    :return: pandas.DataFrame
     """
-    transactions = []
     try:
-        with open(file_path, mode='r', encoding='utf-8') as csv_file:
-            # Указываем разделитель (например, запятую). Если разделитель другой, его нужно указать явно.
-            reader = csv.DictReader(csv_file, delimiter=',')
-            for row in reader:
-                transactions.append(row)
-        return transactions
-    except FileNotFoundError:
-        print(f"Файл {file_path} не найден.")
-        return []
+        df = pd.read_csv(file_path)
+        return df
     except Exception as e:
-        print(f"Произошла ошибка при чтении файла: {e}")
-        return []
+        print(f"Ошибка при чтении CSV-файла: {e}")
+        return None
+
+
+def read_excel(file_path):
+    """
+    Читает данные из Excel-файла и возвращает их в виде DataFrame.
+
+    :param file_path: Путь к файлу Excel.
+    :return: pandas.DataFrame
+    """
+    try:
+        df = pd.read_excel(file_path)
+        return df
+    except Exception as e:
+        print(f"Ошибка при чтении Excel-файла: {e}")
+        return None
