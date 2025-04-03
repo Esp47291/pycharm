@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d384d94c-5b8f-434b-83cf-5b747093223f" name="Changes" comment="13.1 Библиотеки csv и pandas 3.0">
-      <change beforePath="$PROJECT_DIR$/.flake8" beforeDir="false" afterPath="$PROJECT_DIR$/.flake8" afterDir="false" />
+    <list default="true" id="d384d94c-5b8f-434b-83cf-5b747093223f" name="Changes" comment="13.1 Библиотеки csv и pandas 4.0">
+      <change afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transaction_categories.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transaction_filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_transaction_categories.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_transaction_filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_generators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/csv_excel_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/csv_excel_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/external_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/external_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_csv_excel_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_csv_excel_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop12.2" />
+        <entry key="$PROJECT_DIR$" value="develop13.1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +59,7 @@
     &quot;Python tests.Python tests in test_masks.py.executor&quot;: &quot;Debug&quot;,
     &quot;Python._versions.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop13.1&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop13.2&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Alekseev.D/PycharmProjects/Pytest2/data&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
@@ -204,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743511412098</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="13.1 Библиотеки csv и pandas 4.0">
+      <option name="closed" value="true" />
+      <created>1743676273161</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1743676273161</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -221,7 +238,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="develop13.1" />
+                        <option value="develop13.2" />
                       </list>
                     </value>
                   </entry>
@@ -245,6 +262,7 @@
     <MESSAGE value="13.1 Библиотеки csv и pandas" />
     <MESSAGE value="13.1 Библиотеки csv и pandas 2.0" />
     <MESSAGE value="13.1 Библиотеки csv и pandas 3.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="13.1 Библиотеки csv и pandas 3.0" />
+    <MESSAGE value="13.1 Библиотеки csv и pandas 4.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="13.1 Библиотеки csv и pandas 4.0" />
   </component>
 </project>

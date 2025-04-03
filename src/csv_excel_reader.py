@@ -1,30 +1,27 @@
 import pandas as pd
 
-def read_csv(file_path):
-    """
-    Читает данные из CSV-файла и возвращает их в виде DataFrame.
 
-    :param file_path: Путь к файлу CSV.
-    :return: pandas.DataFrame
-    """
+def read_csv(file_path):
     try:
-        df = pd.read_csv(file_path)
-        return df
+        # Попытка прочитать CSV-файл
+        return pd.read_csv(file_path)
+    except FileNotFoundError:
+        print(f"Файл не найден: {file_path}")
+        return None
+    except pd.errors.EmptyDataError:
+        print("Файл пустой")
+        return None
+    except pd.errors.ParserError:
+        print("Ошибка парсинга CSV")
+        return None
     except Exception as e:
-        print(f"Ошибка при чтении CSV-файла: {e}")
+        print(f"Неизвестная ошибка: {e}")
         return None
 
 
 def read_excel(file_path):
-    """
-    Читает данные из Excel-файла и возвращает их в виде DataFrame.
-
-    :param file_path: Путь к файлу Excel.
-    :return: pandas.DataFrame
-    """
     try:
-        df = pd.read_excel(file_path)
-        return df
+        return pd.read_excel(file_path)
     except Exception as e:
         print(f"Ошибка при чтении Excel-файла: {e}")
         return None
